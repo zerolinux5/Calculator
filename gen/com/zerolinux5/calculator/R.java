@@ -12,6 +12,7 @@ public final class R {
     }
     public static final class color {
         public static final int grey=0x7f060000;
+        public static final int white=0x7f060001;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -24,52 +25,56 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int bottom=0x7f020000;
-        public static final int bottomm=0x7f020001;
-        public static final int bottomx=0x7f020002;
-        public static final int eight=0x7f020003;
-        public static final int eightm=0x7f020004;
-        public static final int eightx=0x7f020005;
-        public static final int five=0x7f020006;
-        public static final int fivem=0x7f020007;
-        public static final int fivex=0x7f020008;
-        public static final int four=0x7f020009;
-        public static final int fourm=0x7f02000a;
-        public static final int fourx=0x7f02000b;
-        public static final int ic_launcher=0x7f02000c;
-        public static final int left=0x7f02000d;
-        public static final int leftm=0x7f02000e;
-        public static final int leftx=0x7f02000f;
-        public static final int nine=0x7f020010;
-        public static final int ninem=0x7f020011;
-        public static final int ninex=0x7f020012;
-        public static final int one=0x7f020013;
-        public static final int onem=0x7f020014;
-        public static final int onex=0x7f020015;
-        public static final int right=0x7f020016;
-        public static final int rightm=0x7f020017;
-        public static final int rightx=0x7f020018;
-        public static final int seven=0x7f020019;
-        public static final int sevenm=0x7f02001a;
-        public static final int sevenx=0x7f02001b;
-        public static final int six=0x7f02001c;
-        public static final int sixm=0x7f02001d;
-        public static final int sixx=0x7f02001e;
-        public static final int three=0x7f02001f;
-        public static final int threem=0x7f020020;
-        public static final int threex=0x7f020021;
-        public static final int top=0x7f020022;
-        public static final int topm=0x7f020023;
-        public static final int topx=0x7f020024;
-        public static final int two=0x7f020025;
-        public static final int twom=0x7f020026;
-        public static final int twox=0x7f020027;
-        public static final int zero=0x7f020028;
-        public static final int zerom=0x7f020029;
-        public static final int zerox=0x7f02002a;
+        public static final int backdrop=0x7f020000;
+        public static final int bottom=0x7f020001;
+        public static final int bottomm=0x7f020002;
+        public static final int bottomx=0x7f020003;
+        public static final int eight=0x7f020004;
+        public static final int eightm=0x7f020005;
+        public static final int eightx=0x7f020006;
+        public static final int five=0x7f020007;
+        public static final int fivem=0x7f020008;
+        public static final int fivex=0x7f020009;
+        public static final int four=0x7f02000a;
+        public static final int fourm=0x7f02000b;
+        public static final int fourx=0x7f02000c;
+        public static final int ic_launcher=0x7f02000d;
+        public static final int left=0x7f02000e;
+        public static final int leftm=0x7f02000f;
+        public static final int leftx=0x7f020010;
+        public static final int middle=0x7f020011;
+        public static final int middlem=0x7f020012;
+        public static final int middlex=0x7f020013;
+        public static final int nine=0x7f020014;
+        public static final int ninem=0x7f020015;
+        public static final int ninex=0x7f020016;
+        public static final int one=0x7f020017;
+        public static final int onem=0x7f020018;
+        public static final int onex=0x7f020019;
+        public static final int right=0x7f02001a;
+        public static final int rightm=0x7f02001b;
+        public static final int rightx=0x7f02001c;
+        public static final int seven=0x7f02001d;
+        public static final int sevenm=0x7f02001e;
+        public static final int sevenx=0x7f02001f;
+        public static final int six=0x7f020020;
+        public static final int sixm=0x7f020021;
+        public static final int sixx=0x7f020022;
+        public static final int three=0x7f020023;
+        public static final int threem=0x7f020024;
+        public static final int threex=0x7f020025;
+        public static final int top=0x7f020026;
+        public static final int topm=0x7f020027;
+        public static final int topx=0x7f020028;
+        public static final int two=0x7f020029;
+        public static final int twom=0x7f02002a;
+        public static final int twox=0x7f02002b;
+        public static final int zero=0x7f02002c;
+        public static final int zerom=0x7f02002d;
+        public static final int zerox=0x7f02002e;
     }
     public static final class id {
-        public static final int action_settings=0x7f090012;
+        public static final int action_settings=0x7f090013;
         public static final int button1=0x7f090000;
         public static final int button10=0x7f09000a;
         public static final int button11=0x7f090009;
@@ -77,7 +82,8 @@ public final class R {
         public static final int button13=0x7f09000e;
         public static final int button14=0x7f09000f;
         public static final int button15=0x7f090010;
-        public static final int button16=0x7f090011;
+        public static final int button16=0x7f090012;
+        public static final int button17=0x7f090011;
         public static final int button2=0x7f090001;
         public static final int button3=0x7f090006;
         public static final int button4=0x7f090002;
@@ -98,6 +104,7 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int add=0x7f050004;
+        public static final int answer=0x7f050008;
         public static final int app_name=0x7f050000;
         public static final int div=0x7f050007;
         public static final int hello_world=0x7f050002;

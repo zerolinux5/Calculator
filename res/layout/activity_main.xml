@@ -6,6 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/backdrop"
     tools:context=".MainActivity" >
 
     <Button
@@ -159,32 +160,48 @@
         android:id="@+id/button13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_alignRight="@+id/button2"
-        android:text="@string/add" />
+        android:layout_centerVertical="true"
+        android:text="@string/add"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/button14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/button4"
-        android:text="@string/sub" />
+        android:layout_centerVertical="true"
+        android:text="@string/sub"
+        android:textColor="@color/white" />
     
     <Button
         android:id="@+id/button15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/button13"
-        android:text="@string/mult" />
+        android:layout_above="@+id/button17"
+        android:text="@string/mult" 
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/button16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/button17"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/button13"
-        android:text="@string/div" />
+        android:text="@string/div"
+        android:textColor="@color/white" />
+
+    
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/number" 
+        android:height="48dp"
+        android:width="75dp" />
 
 </RelativeLayout>

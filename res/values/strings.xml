@@ -9,6 +9,9 @@
     <string name="sub">-</string>
     <string name="mult">X</string>
     <string name="div">/</string>
+    <string name="answer"></string>
+    
     <color name="grey">#7D7D7D</color>
+    <color name="white">#FFFFFF</color>
 
 </resources>
