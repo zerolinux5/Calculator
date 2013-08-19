@@ -24,6 +24,10 @@ public class MainActivity extends Activity {
 		Button eight = (Button)findViewById(R.id.button2);
 		Button nine = (Button)findViewById(R.id.button4);
 		Button zero = (Button)findViewById(R.id.button5);
+		Button add = (Button)findViewById(R.id.button13);
+		Button sub = (Button)findViewById(R.id.button14);
+		Button mult = (Button)findViewById(R.id.button15);
+		Button div = (Button)findViewById(R.id.button16);
 		
 		//Give each button pictures
 		one.setBackgroundResource(R.drawable.onex);
@@ -36,6 +40,10 @@ public class MainActivity extends Activity {
 		eight.setBackgroundResource(R.drawable.eightx);
 		nine.setBackgroundResource(R.drawable.ninex);
 		zero.setBackgroundResource(R.drawable.zerox);
+		add.setBackgroundResource(R.drawable.leftx);
+		sub.setBackgroundResource(R.drawable.rightx);
+		mult.setBackgroundResource(R.drawable.topx);
+		div.setBackgroundResource(R.drawable.bottomx);
 	}
 
 	@Override

@@ -23,10 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/button1"
         android:layout_toLeftOf="@+id/button1"
-        android:text="@string/number"
-        android:width="75dp"
         android:height="48dp"
-        android:textColor="@color/grey" />
+        android:text="@string/number"
+        android:textColor="@color/grey"
+        android:width="75dp" />
 
     <Button
         android:id="@+id/button4"
@@ -34,10 +34,10 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/button1"
         android:layout_toRightOf="@+id/button1"
-        android:text="@string/number"
-        android:width="75dp"
         android:height="48dp"
-        android:textColor="@color/grey" />
+        android:text="@string/number"
+        android:textColor="@color/grey"
+        android:width="75dp" />
 
     <Button
         android:id="@+id/button6"
@@ -45,10 +45,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:text="@string/number"
-        android:width="75dp"
         android:height="48dp"
-        android:textColor="@color/grey" />
+        android:text="@string/number"
+        android:textColor="@color/grey"
+        android:width="75dp" />
 
     <Button
         android:id="@+id/button7"
@@ -56,10 +56,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:text="@string/number"
-        android:width="75dp"
         android:height="48dp"
-        android:textColor="@color/grey" />
+        android:text="@string/number"
+        android:textColor="@color/grey"
+        android:width="75dp" />
 
     <Button
         android:id="@+id/button8"
@@ -67,10 +67,10 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/button3"
         android:layout_alignLeft="@+id/button6"
-        android:text="@string/number"
-        android:width="75dp"
         android:height="48dp"
-        android:textColor="@color/grey" />
+        android:text="@string/number"
+        android:textColor="@color/grey"
+        android:width="75dp" />
 
     <Button
         android:id="@+id/button9"
@@ -78,10 +78,10 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/button5"
         android:layout_alignRight="@+id/button7"
-        android:text="@string/number"
-        android:width="75dp"
         android:height="48dp"
-        android:textColor="@color/grey" />
+        android:text="@string/number"
+        android:textColor="@color/grey"
+        android:width="75dp" />
 
     <Button
         android:id="@+id/button11"
@@ -89,11 +89,11 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/button6"
         android:layout_below="@+id/button10"
+        android:height="48dp"
         android:text="@string/number"
         android:textColor="@color/grey"
-        android:width="75dp"
-        android:height="48dp"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:width="75dp" />
 
     <Button
         android:id="@+id/button12"
@@ -101,10 +101,10 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/button7"
         android:layout_below="@+id/button10"
-        android:text="@string/number"
-        android:width="75dp"
         android:height="48dp"
-        android:textColor="@color/grey" />
+        android:text="@string/number"
+        android:textColor="@color/grey"
+        android:width="75dp" />
 
     <Button
         android:id="@+id/button10"
@@ -130,10 +130,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button9"
         android:layout_toLeftOf="@+id/progressBar1"
-        android:text="@string/number"
-        android:width="75dp"
         android:height="48dp"
-        android:textColor="@color/grey" />
+        android:text="@string/number"
+        android:textColor="@color/grey"
+        android:width="75dp" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
@@ -150,9 +150,41 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/progressBar2"
         android:layout_toRightOf="@+id/progressBar2"
-        android:text="@string/number"
-        android:width="75dp"
         android:height="48dp"
-        android:textColor="@color/grey" />
+        android:text="@string/number"
+        android:textColor="@color/grey"
+        android:width="75dp" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/button2"
+        android:text="@string/add" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/button4"
+        android:text="@string/sub" />
+    
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/button13"
+        android:text="@string/mult" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/button13"
+        android:text="@string/div" />
 
 </RelativeLayout>
