@@ -74,7 +74,7 @@ public final class R {
         public static final int zerox=0x7f02002e;
     }
     public static final class id {
-        public static final int action_settings=0x7f090013;
+        public static final int action_settings=0x7f090014;
         public static final int button1=0x7f090000;
         public static final int button10=0x7f09000a;
         public static final int button11=0x7f090009;
@@ -94,6 +94,7 @@ public final class R {
         public static final int button9=0x7f090007;
         public static final int progressBar1=0x7f09000c;
         public static final int progressBar2=0x7f09000d;
+        public static final int textView1=0x7f090013;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

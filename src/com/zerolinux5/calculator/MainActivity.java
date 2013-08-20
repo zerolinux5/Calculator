@@ -8,9 +8,10 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.text.Editable;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity implements SensorEventListener {
 	//accelerometer values
@@ -21,9 +22,9 @@ public class MainActivity extends Activity implements SensorEventListener {
 	private final float NOISE = (float) 6.0;
 	
 	//Main string
-	String firstNumber;
-	String secondNumber;
-	int answer;
+	long firstNumber, secondNumber, answer;
+	int whichNumber = 1, operation = 0;
+	TextView display;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +71,8 @@ public class MainActivity extends Activity implements SensorEventListener {
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
         
+        display = (TextView) findViewById(R.id.textView1);
+        
 	}
 
 	@Override
@@ -102,9 +105,6 @@ public class MainActivity extends Activity implements SensorEventListener {
 			mLastZ = z;
 			mInitialized = true;
 		} else {
-			float differenceX = mLastX -x;
-			float differenceY = mLastY - y;
-			float differenceZ = mLastZ - z;
 			float deltaX = Math.abs(mLastX - x);
 			float deltaY = Math.abs(mLastY - y);
 			float deltaZ = Math.abs(mLastZ - z);
@@ -115,9 +115,225 @@ public class MainActivity extends Activity implements SensorEventListener {
 			mLastY = y;
 			mLastZ = z;
 			if(deltaX > 0 || deltaY > 0){
-				
+				clear();
 			}
 		}
 	}
-
+	
+	public void one(View v){
+		switch(whichNumber){
+			case 1:
+				firstNumber *= 10;
+				firstNumber += 1;
+		    	display.setText(Long.toString(firstNumber)); 
+				break;
+			case 2:
+				secondNumber *= 10;
+				secondNumber += 1;
+				display.setText(Long.toString(secondNumber));
+				break;
+			case 3:
+				
+		}
+	}
+	
+	public void two(View v){
+		switch(whichNumber){
+			case 1:
+				firstNumber *= 10;
+				firstNumber += 2;
+				display.setText(Long.toString(firstNumber));
+				break;
+			case 2:
+				secondNumber *= 10;
+				secondNumber += 2;
+				display.setText(Long.toString(secondNumber));
+				break;
+		}
+	}
+	
+	public void three(View v){
+		switch(whichNumber){
+			case 1:
+				firstNumber *= 10;
+				firstNumber += 3;
+				display.setText(Long.toString(firstNumber));
+				break;
+			case 2:
+				secondNumber *= 10;
+				secondNumber += 3;
+				display.setText(Long.toString(secondNumber));
+				break;
+		}
+	}
+	
+	public void four(View v){
+		switch(whichNumber){
+			case 1:
+				firstNumber *= 10;
+				firstNumber += 4;
+				display.setText(Long.toString(firstNumber));
+				break;
+			case 2:
+				secondNumber *= 10;
+				secondNumber += 4;
+				display.setText(Long.toString(secondNumber));
+				break;
+		}
+	}
+	
+	public void five(View v){
+		switch(whichNumber){
+			case 1:
+				firstNumber *= 10;
+				firstNumber += 5;
+				display.setText(Long.toString(firstNumber));
+				break;
+			case 2:
+				secondNumber *= 10;
+				secondNumber += 5;
+				display.setText(Long.toString(secondNumber));
+				break;
+		}
+	}
+	
+	public void six(View v){
+		switch(whichNumber){
+			case 1:
+				firstNumber *= 10;
+				firstNumber += 6;
+				display.setText(Long.toString(firstNumber));
+				break;
+			case 2:
+				secondNumber *= 10;
+				secondNumber += 6;
+				display.setText(Long.toString(secondNumber));
+				break;
+		}
+	}
+	
+	public void seven(View v){
+		switch(whichNumber){
+			case 1:
+				firstNumber *= 10;
+				firstNumber += 7;
+				display.setText(Long.toString(firstNumber));
+				break;
+			case 2:
+				secondNumber *= 10;
+				secondNumber += 7;
+				display.setText(Long.toString(secondNumber));
+				break;
+		}
+	}
+	
+	public void eight(View v){
+		switch(whichNumber){
+			case 1:
+				firstNumber *= 10;
+				firstNumber += 8;
+				display.setText(Long.toString(firstNumber));
+				break;
+			case 2:
+				secondNumber *= 10;
+				secondNumber += 8;
+				display.setText(Long.toString(secondNumber));
+				break;
+		}
+	}
+	
+	public void nine(View v){
+		switch(whichNumber){
+			case 1:
+				firstNumber *= 10;
+				firstNumber += 9;
+				display.setText(Long.toString(firstNumber));
+				break;
+			case 2:
+				secondNumber *= 10;
+				secondNumber += 9;
+				display.setText(Long.toString(secondNumber));
+				break;
+		}
+	}
+	
+	public void zero(View v){
+		switch(whichNumber){
+			case 1:
+				firstNumber *= 10;
+				display.setText(Long.toString(firstNumber));
+				break;
+			case 2:
+				secondNumber *= 10;
+				display.setText(Long.toString(secondNumber));
+				break;
+		}
+	}
+	
+	public void add(View v){
+		whichNumber = 2;
+		operation = 1;
+	}
+	
+	public void sub(View v){
+		whichNumber = 2;
+		operation = 2;
+	}
+	
+	public void mult(View v){
+		whichNumber = 2;
+		operation = 3;
+	}
+	
+	public void div(View v){
+		whichNumber = 2;
+		operation = 4;
+	}
+	
+	public void enter(View v){
+		switch (operation){
+			case 1:
+				answer = firstNumber + secondNumber;
+				display.setText(Long.toString(answer));
+				operation = 0;
+				whichNumber = 1;
+				firstNumber = 0;
+				secondNumber = 0;
+				break;
+			case 2:
+				answer = firstNumber - secondNumber;
+				display.setText(Long.toString(answer));
+				operation = 0;
+				whichNumber = 1;
+				firstNumber = 0;
+				secondNumber = 0;
+				break;
+			case 3:
+				answer = firstNumber * secondNumber;
+				display.setText(Long.toString(answer));
+				operation = 0;
+				whichNumber = 1;
+				firstNumber = 0;
+				secondNumber = 0;
+				break;
+			case 4:
+				answer = firstNumber / secondNumber;
+				display.setText(Long.toString(answer));
+				operation = 0;
+				whichNumber = 1;
+				firstNumber = 0;
+				secondNumber = 0;
+				break;
+		}
+	}
+	
+	public void clear(){
+		if (operation == 0){
+			firstNumber = 0;
+			display.setText(Long.toString(firstNumber));
+		} else {
+			secondNumber = 0;
+			display.setText(Long.toString(secondNumber));
+		}
+	}
 }
