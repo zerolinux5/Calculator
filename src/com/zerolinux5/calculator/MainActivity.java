@@ -22,7 +22,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 	private final float NOISE = (float) 6.0;
 	
 	//Main string
-	long firstNumber, secondNumber, answer;
+	long firstNumber, secondNumber, answer, continuation = 0;
 	int whichNumber = 1, operation = 0;
 	TextView display;
 	
@@ -90,7 +90,6 @@ public class MainActivity extends Activity implements SensorEventListener {
 
 	@Override
 	public void onAccuracyChanged(Sensor sensor, int accuracy) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -123,6 +122,10 @@ public class MainActivity extends Activity implements SensorEventListener {
 	public void one(View v){
 		switch(whichNumber){
 			case 1:
+				if (continuation == 1){
+					firstNumber = 0;
+					continuation = 0;
+				}
 				firstNumber *= 10;
 				firstNumber += 1;
 		    	display.setText(Long.toString(firstNumber)); 
@@ -140,6 +143,10 @@ public class MainActivity extends Activity implements SensorEventListener {
 	public void two(View v){
 		switch(whichNumber){
 			case 1:
+				if (continuation == 1){
+					firstNumber = 0;
+					continuation = 0;
+				}
 				firstNumber *= 10;
 				firstNumber += 2;
 				display.setText(Long.toString(firstNumber));
@@ -155,6 +162,10 @@ public class MainActivity extends Activity implements SensorEventListener {
 	public void three(View v){
 		switch(whichNumber){
 			case 1:
+				if (continuation == 1){
+					firstNumber = 0;
+					continuation = 0;
+				}
 				firstNumber *= 10;
 				firstNumber += 3;
 				display.setText(Long.toString(firstNumber));
@@ -170,6 +181,10 @@ public class MainActivity extends Activity implements SensorEventListener {
 	public void four(View v){
 		switch(whichNumber){
 			case 1:
+				if (continuation == 1){
+					firstNumber = 0;
+					continuation = 0;
+				}
 				firstNumber *= 10;
 				firstNumber += 4;
 				display.setText(Long.toString(firstNumber));
@@ -185,6 +200,10 @@ public class MainActivity extends Activity implements SensorEventListener {
 	public void five(View v){
 		switch(whichNumber){
 			case 1:
+				if (continuation == 1){
+					firstNumber = 0;
+					continuation = 0;
+				}
 				firstNumber *= 10;
 				firstNumber += 5;
 				display.setText(Long.toString(firstNumber));
@@ -200,6 +219,10 @@ public class MainActivity extends Activity implements SensorEventListener {
 	public void six(View v){
 		switch(whichNumber){
 			case 1:
+				if (continuation == 1){
+					firstNumber = 0;
+					continuation = 0;
+				}
 				firstNumber *= 10;
 				firstNumber += 6;
 				display.setText(Long.toString(firstNumber));
@@ -215,6 +238,10 @@ public class MainActivity extends Activity implements SensorEventListener {
 	public void seven(View v){
 		switch(whichNumber){
 			case 1:
+				if (continuation == 1){
+					firstNumber = 0;
+					continuation = 0;
+				}
 				firstNumber *= 10;
 				firstNumber += 7;
 				display.setText(Long.toString(firstNumber));
@@ -230,6 +257,10 @@ public class MainActivity extends Activity implements SensorEventListener {
 	public void eight(View v){
 		switch(whichNumber){
 			case 1:
+				if (continuation == 1){
+					firstNumber = 0;
+					continuation = 0;
+				}
 				firstNumber *= 10;
 				firstNumber += 8;
 				display.setText(Long.toString(firstNumber));
@@ -245,6 +276,10 @@ public class MainActivity extends Activity implements SensorEventListener {
 	public void nine(View v){
 		switch(whichNumber){
 			case 1:
+				if (continuation == 1){
+					firstNumber = 0;
+					continuation = 0;
+				}
 				firstNumber *= 10;
 				firstNumber += 9;
 				display.setText(Long.toString(firstNumber));
@@ -260,6 +295,10 @@ public class MainActivity extends Activity implements SensorEventListener {
 	public void zero(View v){
 		switch(whichNumber){
 			case 1:
+				if (continuation == 1){
+					firstNumber = 0;
+					continuation = 0;
+				}
 				firstNumber *= 10;
 				display.setText(Long.toString(firstNumber));
 				break;
@@ -271,21 +310,33 @@ public class MainActivity extends Activity implements SensorEventListener {
 	}
 	
 	public void add(View v){
+		if (firstNumber != 0 && secondNumber!=0){
+			enter(v);
+		}
 		whichNumber = 2;
 		operation = 1;
 	}
 	
 	public void sub(View v){
+		if (firstNumber != 0 && secondNumber!=0){
+			enter(v);
+		}
 		whichNumber = 2;
 		operation = 2;
 	}
 	
 	public void mult(View v){
+		if (firstNumber != 0 && secondNumber!=0){
+			enter(v);
+		}
 		whichNumber = 2;
 		operation = 3;
 	}
 	
 	public void div(View v){
+		if (firstNumber != 0 && secondNumber!=0){
+			enter(v);
+		}
 		whichNumber = 2;
 		operation = 4;
 	}
@@ -297,32 +348,36 @@ public class MainActivity extends Activity implements SensorEventListener {
 				display.setText(Long.toString(answer));
 				operation = 0;
 				whichNumber = 1;
-				firstNumber = 0;
+				firstNumber = answer;
 				secondNumber = 0;
+				continuation = 1;
 				break;
 			case 2:
 				answer = firstNumber - secondNumber;
 				display.setText(Long.toString(answer));
 				operation = 0;
 				whichNumber = 1;
-				firstNumber = 0;
+				firstNumber = answer;
 				secondNumber = 0;
+				continuation = 1;
 				break;
 			case 3:
 				answer = firstNumber * secondNumber;
 				display.setText(Long.toString(answer));
 				operation = 0;
 				whichNumber = 1;
-				firstNumber = 0;
+				firstNumber = answer;
 				secondNumber = 0;
+				continuation = 1;
 				break;
 			case 4:
 				answer = firstNumber / secondNumber;
 				display.setText(Long.toString(answer));
 				operation = 0;
 				whichNumber = 1;
-				firstNumber = 0;
+				firstNumber = answer;
 				secondNumber = 0;
+				continuation = 1;
 				break;
 		}
 	}
